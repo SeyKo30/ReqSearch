@@ -1,0 +1,217 @@
+/* static/css/styles.css */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+.menu {
+    background-color: #333;
+    color: rgb(153, 255, 0);
+    padding: 10px;
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.menu ul li a {
+    color: rgb(153, 255, 0);
+    text-decoration: none;
+}
+
+.menu ul li a:hover {
+    color: yellow;
+}
+
+.user-menu .user-info {
+    position: relative;
+    display: inline-block;
+}
+
+.user-menu .user-info .company-info {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    display: none;
+}
+
+.user-menu:hover .user-info .company-info {
+    display: block;
+}
+
+/* Стили для выплывающего окна */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 8px;
+    top: 100%; /* Отображать окно сразу под родительским элементом */
+    left: 0; /* Расположение слева от родительского элемента */
+}
+
+.menu-container::after {
+    content: '';
+    display: block;
+    height: 60px; /* Высота полоски */
+    width: 100%;
+    background: linear-gradient(to right, #3498db, #ccc); /* Градиент от голубого к серому */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
+.about-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-section p {
+    text-align: justify;
+    padding-bottom: 20px;
+    color: #333;
+    font-size: 16px;
+}
+
+/* Ваши стили для главной страницы */
+
+.position-relative {
+    overflow: hidden;
+    padding: 3rem 1.5rem;
+    text-align: center;
+    background-color: #f8f9fa;
+}
+
+.display-4 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.lead {
+    font-size: 1.25rem;
+    color: #343a40;
+    margin-bottom: 1.25rem;
+}
+
+.btn-outline-secondary {
+    color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.flex-md-equal {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.bg-dark {
+    background-color: #343a40;
+    color: #fff;
+    overflow: hidden;
+}
+
+.bg-light {
+    background-color: #f8f9fa;
+    overflow: hidden;
+}
+
+.display-5 {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.lead {
+    font-size: 1.25rem;
+    color: #343a40;
+    margin-bottom: 1.25rem;
+}
+.btn-styled {
+    background-color: #FF5733; /* Выберите желаемый цвет */
+    color: #ffffff; /* Цвет текста */
+    font-size: 18px; /* Размер шрифта */
+    border-radius: 10px; /* Радиус скругления углов */
+    padding: 10px 20px; /* Внутренний отступ */
+    text-decoration: none; /* Убираем стандартное подчеркивание ссылки */
+  }
+
+.bottom-image {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto; /* Центрировать изображение горизонтально */
+}
+
+/* В твоем CSS-файле */
+
+.delete-btn {
+    background-color: red; /* Красный фон */
+    color: white; /* Белый цвет текста */
+    border: 0.7px solid red; /* Тонкая рамка уменьшена на 30% */
+    border-radius: 3.5px; /* Закругленные углы уменьшены на 30% */
+    padding: 2.1px 4.2px; /* Внутренний отступ уменьшен на 30% */
+    text-decoration: none; /* Убираем стандартное подчеркивание для ссылки */
+    transition: background-color 0.3s, color 0.3s; /* Плавные изменения при наведении */
+    font-size: 8.4px; /* Размер текста уменьшен на 30% */
+}
+
+.delete-btn:hover {
+    background-color: lightblue; /* Голубой фон при наведении */
+    color: black; /* Черный цвет текста при наведении */
+}
+
+.delete-btn.confirm {
+    background-color: lightblue; /* Голубой фон */
+}
+
+.delete-btn.confirm:hover {
+    background-color: red; /* Возвращаем красный фон при наведении в режиме подтверждения */
+}
+
+
+
+
+
+.edit-container {
+    display: none;
+}
+
+.editable-text.visible,
+.edit-container.visible {
+    display: block;
+}
+
+.editable-text.invisible,
+.edit-container.invisible {
+    display: none;
+}

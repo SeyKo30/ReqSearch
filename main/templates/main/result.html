@@ -1,0 +1,18 @@
+{% extends 'main/layout.html' %}
+
+
+{% block title %} Страница проверки {% endblock %}
+
+{% block content %} 
+
+
+<h1>Результаты анализа</h1>
+    <p>Загруженный файл: {{ uploaded_file.file }}</p>
+    <h2>Предложения с ключевыми словами:</h2>
+    <ul>
+        {% for sentence in sentences_with_keywords %}
+            <li>{{ sentence }}</li>
+        {% endfor %}
+    </ul>
+
+ {% endblock %}

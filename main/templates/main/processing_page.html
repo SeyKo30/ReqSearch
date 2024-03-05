@@ -1,0 +1,33 @@
+{% extends 'main/layout.html' %}
+
+{% block title %} Обработка результатов {% endblock %}
+
+{% block content %} 
+
+<h2>Обработка результатов:</h2>
+
+
+{% if sentences_with_keywords1 %}
+    <h3>Справки гарантийные листы и согласия:</h3>
+    <ol>
+        {% for sentence in sentences_with_keywords1 %}
+            <li>{{ sentence }}</li>
+        {% endfor %}
+    </ol>
+{% else %}
+    <p>Нет результатов для отображения.</p>
+{% endif %}
+
+
+{% if sentences_with_keywords2 %}
+    <h3>Документы сертификаты прочее:</h3>
+    <ol>
+        {% for sentence in sentences_with_keywords2 %}
+            <li>{{ sentence }}</li>
+        {% endfor %}
+    </ol>
+{% else %}
+    <p>Нет результатов для отображения.</p>
+{% endif %}
+
+{% endblock %}

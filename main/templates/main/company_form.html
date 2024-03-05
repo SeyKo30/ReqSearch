@@ -1,0 +1,38 @@
+{% extends 'main/layout.html' %}
+
+{% block title %} Создание компании {% endblock %}
+
+{% block content %} 
+
+<h1>Создание компании</h1>
+
+<form method="post">
+    {% csrf_token %}
+    
+    <div>
+        <label for="{{ form.name.id_for_label }}">Название компании:</label>
+        {{ form.name }}
+    </div>
+    <div>
+        <label for="{{ form.EDR.id_for_label }}">EDR:</label>
+        {{ form.EDR }}
+    </div>
+    <div>
+        <label for="{{ form.phone_number.id_for_label }}">Телефон:</label>
+        {{ form.phone_number }}
+    </div>
+    <div>
+        <label for="{{ form.address.id_for_label }}">Адрес:</label>
+        {{ form.address }}
+    </div>
+    <div>
+        <label for="{{ form.responsible_person.id_for_label }}">Ответственный:</label>
+        {{ form.responsible_person }}
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<a href="{% url 'success_page' %}" class="btn btn-success">Вернуться</a>
+  
+{% endblock %}

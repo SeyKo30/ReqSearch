@@ -1,0 +1,47 @@
+{% extends 'main/layout.html' %}
+{% block title %} ЛК {% endblock %}
+{% block content %} 
+<h1>Личный кабинет</h1>
+<p>Привет, {{ user.username }}!</p>
+    
+{% if companies %}
+  <h2>Список компаний:</h2>
+  <ul>
+    {% for company in companies %}
+      <li>
+        <strong>{{ company.name }}</strong>
+        <ul>
+          <li><strong>Ответственный:</strong> {{ company.responsible_person }}</li>
+          <li><strong>Телефон:</strong> {{ company.phone_number }}</li>
+          <li><strong>Адрес:</strong> {{ company.address }}</li>
+        </ul>
+        <a href="{% url 'delete_company' company.id %}" class="delete-btn btn btn-danger">УДАЛИТЬ</a>
+      </li>
+    {% endfor %}
+  </ul>
+{% else %}
+  <p>У вас нет зарегистрированных компаний.</p>
+{% endif %}
+
+<a href="{% url 'create_company' %}" class="btn btn-primary">Добавить компанию</a>
+
+<script>
+    const deleteButtons = document.querySelectorAll('.delete-btn');
+    deleteButtons.forEach(button => {
+        button.addEventListener('click', (event) => {
+            if (!button.classList.contains('confirm')) {
+                event.preventDefault();
+                button.classList.add('confirm');
+                button.textContent = 'Вы уверены?';
+            }
+        });
+
+        button.addEventListener('mouseleave', () => {
+            if (button.classList.contains('confirm')) {
+                button.textContent = 'УДАЛИТЬ';
+                button.classList.remove('confirm');
+            }
+        });
+    });
+</script>
+{% endblock %}

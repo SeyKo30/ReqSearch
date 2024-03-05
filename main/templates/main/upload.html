@@ -1,0 +1,16 @@
+{% extends 'main/layout.html' %}
+
+{% block title %} Ввод текста на проверку {% endblock %}
+
+{% block content %} 
+  
+<h1>Загрузить документацию без проекта</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Обработать</button>
+    </form>
+    
+
+  
+{% endblock %}

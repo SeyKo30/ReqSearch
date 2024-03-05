@@ -1,0 +1,14 @@
+{% extends 'main/layout.html' %}
+
+{% block title %} Создание пользователя {% endblock %}
+
+{% block content %} 
+  
+<h1>Company List</h1>
+    <ul>
+        {% for company in companies %}
+            <li>{{ company.name }}</li>
+        {% endfor %}
+    </ul>
+  
+{% endblock %}

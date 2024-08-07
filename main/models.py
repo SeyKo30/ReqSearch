@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 
 class Company(models.Model):
+    objects = None
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     name = models.CharField(max_length=100)
     EDR = models.CharField(max_length=50)

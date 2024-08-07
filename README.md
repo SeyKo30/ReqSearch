@@ -1,38 +1,38 @@
 # TendCheck
 
-* 		Цели и требования приложения:
-    Цель: Создание Браузерного приложения для помощи в подготовке предложений для участников государственных закупок в соответствии с требованиями заказчика и Закона
-    Требования: Наличие функционала для анализа документации Заказчика, функционал по подготовке шаблонных документов, функционал формирования итоговой папки для подачи предложений
+Goals and Requirements of the Application:
+Goal: To create a browser-based application that assists in preparing proposals for participants in government procurements, in accordance with the requirements of the customer and the law.
+Requirements:
 
-* 		Проектирование и архитектура:
-    * Разработка общей архитектуры приложения.
-
-* 		Функциональность Стартовой страницы и навигации:
-    * Создание заглавной страницы приложения с описанием и информацией о приложении.
-    * Создание меню навигации 
-    * Создание оформления страниц приложения 
-
-* 		Функциональность личного кабинета:
-    * Разработка функционала регистрации и авторизации пользователей для создания личного кабинета.
-    * Создание формы для приема данных компании от клиента.
-    * Реализация возможности заполнения форм заказчика информацией из шаблона
-    * Реализация храненилища уставных документов
-    * 
-* 		Управление документами:
-    * Разработка механизма принимающего текст документации.
-    * Разработка механизма парсинга текста по ключевым словам.
-    * Создание функционала для распределения документов на разовые и постоянные категории (справки и документы).
-    * Реализация выдачи списка всех необходимых документов.
-    * Реализация формирования справок из разовой категории с шаблонами
-    * Реализация формирования общего архива с документами предложения и рекомендациями
-    * Реализация функционала по отбору аналогичных договоров по предмету закупки
-* 		Тестирование и отладка:
-    * Проведение тестирования функционала на соответствие требованиям и отладка ошибок.
-    * Корректировка и исправление функционала на основе обратной связи от пользователей и тестировщиков.
-* 		Релиз и поддержка:
-    * Подготовка приложения к релизу.
-    * Развертывание приложения на сервере и его запуск.
-    * Дальнейшая поддержка приложения после релиза, реагирование на фидбек пользователей и разработка обновлений.
+Functionality for analyzing customer documentation
+Functionality for preparing template documents
+Functionality for generating a final folder for proposal submissions
+Design and Architecture:
+Development of the overall application architecture.
+Functionality of the Home Page and Navigation:
+Creation of the application's main page with descriptions and information about the application.
+Creation of a navigation menu.
+Creation of page designs for the application.
+Functionality of the Personal Account:
+Development of user registration and authentication functionality to create a personal account.
+Creation of a form for receiving company data from the client.
+Implementation of the ability to fill out customer forms with information from a template.
+Implementation of a repository for statutory documents.
+Document Management:
+Development of a mechanism for receiving text documentation.
+Development of a mechanism for parsing text by keywords.
+Creation of functionality for categorizing documents into one-time and permanent categories (references and documents).
+Implementation of a feature to list all necessary documents.
+Implementation of generating references from one-time categories using templates.
+Implementation of creating a general archive with proposal documents and recommendations.
+Implementation of functionality for selecting similar contracts based on the subject of procurement.
+Testing and Debugging:
+Conducting functionality testing to ensure compliance with requirements and debugging errors.
+Adjusting and correcting functionality based on feedback from users and testers.
+Release and Support:
+Preparing the application for release.
+Deploying the application on a server and launching it.
+Ongoing application support after release, responding to user feedback, and developing updates.
 
 
 
@@ -44,19 +44,21 @@
 !!!!!
 
 
-Для запуска приложения необходимо выполнить следующие действия:
+To launch the application, follow these steps:
+Clone the repository:
+Open the terminal (command line) on your computer and execute the git clone command with the repository URL:те терминал (командную строку) на вашем компьютере и выполните команду git clone с URL-адресом репозитория:
+git clone "repository URL"
 
-1) Склонируйте репозиторий: Откройте терминал (командную строку) на вашем компьютере и выполните команду git clone с URL-адресом репозитория:
-git clone "URL-адрес репозитория"
+Navigate to the project directory:
+Move to the directory that was created after cloning the repository:
 
-2) Перейдите в каталог проекта: Перейдите в каталог, который был создан после клонирования репозитория:
+cd "folder name"
 
-cd "Название папки"
-
-3) Запустите сервер: Запустите веб-сервер разработки Django с помощью команды: 
+Start the server:
+Launch the Django development web server using the command:
 
 python manage.py runserver 
-или
+or
 python3 manage.py runserver
 
-После этого будет доступен по адресу http://127.0.0.1:8000/ в браузере.
+After this, the application will be available at http://127.0.0.1:8000/ in your browser.
